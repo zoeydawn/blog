@@ -1,0 +1,15 @@
+[package]
+name = "blog"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket", branch = "v0.5-rc" }
+
+# in your application, you should enable only the template engine(s) used
+[dependencies.rocket_dyn_templates]
+git = "https://github.com/SergioBenitez/Rocket"
+branch = "v0.5-rc"
+features = ["tera", "handlebars"]
